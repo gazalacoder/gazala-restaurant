@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gazala Restaurant — Premium Dining Experience</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ========== OPENING ANIMATION ========== -->
+<div id="opening">
+  <div class="opening-inner">
+    <h1>GAZALA</h1>
+    <p>RESTAURANT & HOTEL</p>
+    <div class="opening-line"></div>
+    <span class="tagline">Since 1995 · Authentic Indian Cuisine</span>
+  </div>
+  <div class="opening-curtain left"></div>
+  <div class="opening-curtain right"></div>
+</div>
+
+<!-- ========== 1. PREMIUM NAVBAR ========== -->
+<nav class="navbar" id="navbar">
+  <div class="logo">GAZALA</div>
+  <ul class="nav-links">
+    <li><a href="#hero" class="nav-link active">Home</a></li>
+    <li><a href="#highlights" class="nav-link">Highlights</a></li>
+    <li><a href="#menu" class="nav-link">Menu</a></li>
+    <li><a href="#story" class="nav-link">Story</a></li>
+    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+    <li><a href="#reserve" class="nav-link">Reserve</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+  <button class="cart-btn-nav" id="open-cart-btn">
+    🛒 Cart <span class="cart-badge" id="cart-badge">0</span>
+  </button>
+</nav>
+
+<!-- ========== 2. CINEMATIC 3D HERO ========== -->
+<section class="hero" id="hero">
+  <div class="hero-bg-image"></div>
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Welcome to</p>
+    <h1 class="hero-title">GAZALA</h1>
+    <p class="hero-subtitle">RESTAURANT & HOTEL</p>
+    <div class="hero-divider"></div>
+    <p class="hero-desc">
+      A cinematic journey through authentic Indian flavors, 
+      royal hospitality, and memories crafted to last a lifetime.
+    </p>
+    <div class="hero-buttons">
+      <a href="#menu" class="btn-primary">🍽️ Explore Menu</a>
+      <a href="#reserve" class="btn-outline">📅 Reserve Table</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll to explore</span>
+    <div class="scroll-arrow">↓</div>
+  </div>
+</section>
+
+<!-- ========== 3. RESTAURANT HIGHLIGHTS ========== -->
+<section class="section highlights" id="highlights">
+  <div class="section-header">
+    <p class="section-eyebrow">Why Gazala</p>
+    <h2 class="section-title">Restaurant Highlights</h2>
+    <p class="section-sub">What makes every visit unforgettable</p>
+  </div>
+  <div class="highlights-grid">
+    <div class="highlight-card">
+      <div class="highlight-photo" style="background-image: url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=80');"></div>
+      <h3>Authentic Recipes</h3>
+      <p>Traditional family recipes preserved for three generations</p>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-photo" style="background-image: url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&q=80');"></div>
+      <h3>Master Chefs</h3>
+      <p>Award-winning chefs crafting every dish with precision</p>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-photo" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80');"></div>
+      <h3>Royal Ambience</h3>
+      <p>Elegant interiors with warm candlelight and gold accents</p>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-photo" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80');"></div>
+      <h3>Quick Service</h3>
+      <p>Hot, fresh food served within minutes at your table</p>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-photo" style="background-image: url('https://images.unsplash.com/photo-1506368083636-6defb67639a7?w=400&q=80');"></div>
+      <h3>Fresh Ingredients</h3>
+      <p>Locally sourced, hand-picked produce delivered daily</p>
+    </div>
+    <div class="highlight-card">
+      <div class="highlight-photo" style="background-image: url('https://images.unsplash.com/photo-1567521464027-f127ff144326?w=400&q=80');"></div>
+      <h3>Award-Winning</h3>
+      <p>Recognized as Best Indian Restaurant 2024</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 4. SIGNATURE MENU ========== -->
+<section class="section menu-section" id="menu">
+  <div class="section-header">
+    <p class="section-eyebrow">Crafted with Love</p>
+    <h2 class="section-title">Signature Menu</h2>
+    <p class="section-sub">Handpicked dishes from our master chefs</p>
+  </div>
+
+  <div class="category-tabs">
+    <button class="cat-tab active" data-cat="all">🍽️ All</button>
+    <button class="cat-tab" data-cat="starter">🥗 Starters</button>
+    <button class="cat-tab" data-cat="main">🍛 Main</button>
+    <button class="cat-tab" data-cat="bread">🫓 Breads</button>
+    <button class="cat-tab" data-cat="drink">🥤 Drinks</button>
+    <button class="cat-tab" data-cat="dessert">🍮 Desserts</button>
+  </div>
+
+  <div class="menu-grid" id="menu-grid"></div>
+</section>
+
+<!-- ========== 5. 3D FOOD EXPERIENCE ========== -->
+<section class="section food3d-section" id="food3d">
+  <div class="section-header">
+    <p class="section-eyebrow">Interactive</p>
+    <h2 class="section-title">3D Food Experience</h2>
+    <p class="section-sub">Rotate a dish to explore it in 3D</p>
+  </div>
+  <div class="food3d-wrapper">
+    <div class="food3d-stage">
+      <div class="food3d-image" id="food3d-image"
+           style="background-image: url('https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&q=80');">
+      </div>
+      <div class="food3d-glow"></div>
+    </div>
+    <div class="food3d-info">
+      <h3 id="food3d-name">Chicken Biryani</h3>
+      <p class="gold" id="food3d-price">₹250</p>
+      <p id="food3d-desc">
+        Fragrant basmati rice layered with tender chicken, 
+        slow-cooked with aromatic spices and saffron.
+      </p>
+      <div class="food3d-selector">
+        <button class="food-pick active" data-idx="0">🍛 Biryani</button>
+        <button class="food-pick" data-idx="1">🥘 Korma</button>
+        <button class="food-pick" data-idx="2">🍗 Tandoori</button>
+        <button class="food-pick" data-idx="3">🍮 Dessert</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 6. OUR STORY ========== -->
+<section class="section story-section" id="story">
+  <div class="section-header">
+    <p class="section-eyebrow">Since 1995</p>
+    <h2 class="section-title">Our Story</h2>
+  </div>
+  <div class="story-wrapper">
+    <div class="story-visual" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80');">
+      <div class="story-glow"></div>
+    </div>
+    <div class="story-text">
+      <h3>A Legacy of Flavor</h3>
+      <p>
+        Founded in 1995 in the heart of Mumbai, <strong>Gazala Restaurant</strong> 
+        began as a small family kitchen with a singular dream — to share the 
+        rich, authentic flavors of Indian cuisine with the world.
+      </p>
+      <p>
+        For three generations, we've preserved our grandmother's secret recipes, 
+        blending them with modern culinary artistry. Every dish carries the warmth 
+        of our heritage and the care of our family.
+      </p>
+      <p>
+        Today, Gazala stands as one of the city's most loved dining destinations — 
+        where guests become family and meals become memories.
+      </p>
+      <div class="story-stats">
+        <div><strong class="gold">30+</strong><span>Years</span></div>
+        <div><strong class="gold">50K+</strong><span>Guests</span></div>
+        <div><strong class="gold">40+</strong><span>Dishes</span></div>
+        <div><strong class="gold">4.8★</strong><span>Rating</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 7. FOOD GALLERY ========== -->
+<section class="section gallery-section" id="gallery">
+  <div class="section-header">
+    <p class="section-eyebrow">Visual Feast</p>
+    <h2 class="section-title">Food Gallery</h2>
+    <p class="section-sub">A glimpse into our culinary world</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item tall" style="background-image: url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80');">
+      <span>Biryani Royale</span>
+    </div>
+    <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&q=80');">
+      <span>Paneer Tikka</span>
+    </div>
+    <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=600&q=80');">
+      <span>Tandoori Fire</span>
+    </div>
+    <div class="gallery-item wide" style="background-image: url('https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=800&q=80');">
+      <span>Fresh Naan</span>
+    </div>
+    <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1601303516361-4e5b9d6b3b3f?w=600&q=80');">
+      <span>Sweet Ending</span>
+    </div>
+    <div class="gallery-item tall" style="background-image: url('https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=800&q=80');">
+      <span>Butter Chicken</span>
+    </div>
+    <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=600&q=80');">
+      <span>Masala Chai</span>
+    </div>
+    <div class="gallery-item wide" style="background-image: url('https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&q=80');">
+      <span>Dal Makhani</span>
+    </div>
+  </div>
+</section>
+<!-- ========== 8. CUSTOMER REVIEWS ========== -->
+<section class="section reviews-section" id="reviews">
+  <div class="section-header">
+    <p class="section-eyebrow">Loved by Guests</p>
+    <h2 class="section-title">Customer Reviews</h2>
+    <p class="section-sub">What our guests say about us</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        "The biryani was absolutely divine — every grain of rice 
+        was infused with flavor. Felt like a royal meal!"
+      </p>
+      <div class="review-author">
+        <div class="review-avatar">R</div>
+        <div>
+          <strong>Rahul Sharma</strong>
+          <p>Regular Guest</p>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        "Best tandoori chicken in the city! The ambience is warm 
+        and the staff treats you like family."
+      </p>
+      <div class="review-author">
+        <div class="review-avatar">P</div>
+        <div>
+          <strong>Priya Patel</strong>
+          <p>Food Blogger</p>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        "Celebrated our anniversary here — the candlelit tables 
+        and personalized service made it unforgettable."
+      </p>
+      <div class="review-author">
+        <div class="review-avatar">A</div>
+        <div>
+          <strong>Amit Verma</strong>
+          <p>Loyal Customer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 9. TABLE RESERVATION ========== -->
+<section class="section reserve-section" id="reserve">
+  <div class="section-header">
+    <p class="section-eyebrow">Book Your Table</p>
+    <h2 class="section-title">Table Reservation</h2>
+    <p class="section-sub">Reserve a table for your special evening</p>
+  </div>
+  <div class="reserve-wrapper">
+    <form class="reserve-form" id="reserve-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="res-name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" id="res-phone" placeholder="+91 9806135784" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" id="res-date" required />
+        </div>
+        <div class="form-group">
+          <label>Time</label>
+          <input type="time" id="res-time" required />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Guests</label>
+          <select id="res-guests" required>
+            <option value="1">1 Person</option>
+            <option value="2" selected>2 People</option>
+            <option value="3">3 People</option>
+            <option value="4">4 People</option>
+            <option value="5">5 People</option>
+            <option value="6">6 People</option>
+            <option value="8">8+ People</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Table Preference</label>
+          <select id="res-table">
+            <option value="any">Any Table</option>
+            <option value="window">Window Side</option>
+            <option value="corner">Corner Table</option>
+            <option value="center">Center Stage</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Special Request</label>
+        <textarea id="res-note" rows="3" placeholder="Anniversary, birthday, dietary preferences..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary full-width">Confirm Reservation 📅</button>
+    </form>
+    <div class="reserve-info">
+      <div class="info-card">
+        <div class="info-icon">🕐</div>
+        <h3>Opening Hours</h3>
+        <p>Mon – Sun<br>11:00 AM – 11:00 PM</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📍</div>
+        <h3>Location</h3>
+        <p>123 Food Street<br>Mumbai 400001</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📞</div>
+        <h3>Call Us</h3>
+        <p>+91 9806135784</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 10. CART & ONLINE ORDERING ========== -->
+<section class="section order-section" id="order">
+  <div class="section-header">
+    <p class="section-eyebrow">Quick & Easy</p>
+    <h2 class="section-title">Online Ordering</h2>
+    <p class="section-sub">Order your favorites — delivered hot or dine-in</p>
+  </div>
+
+  <div class="order-wrapper">
+    <div class="order-picker">
+      <h3>Select Dishes</h3>
+      <div class="order-items-list" id="order-items-list"></div>
+    </div>
+
+    <div class="cart-panel" id="cart-panel">
+      <h3>Your Cart</h3>
+      <div id="cart-content">
+        <p class="empty-msg">🛒 Your cart is empty</p>
+      </div>
+      <div class="cart-summary" id="cart-summary" style="display:none;">
+        <div class="bill-row"><span>Subtotal</span><span>₹<span id="cart-sub">0</span></span></div>
+        <div class="bill-row"><span>GST (5%)</span><span>₹<span id="cart-gst">0</span></span></div>
+        <div class="bill-row total"><span>Total</span><span class="gold">₹<span id="cart-total">0</span></span></div>
+        <div class="order-type">
+          <label>Order Type:</label>
+          <div class="type-btns">
+            <button class="type-btn active" data-type="dine">🍽️ Dine-in</button>
+            <button class="type-btn" data-type="takeaway">🥡 Takeaway</button>
+          </div>
+        </div>
+        <select id="order-table" class="table-picker">
+          <option value="1">Table 1</option>
+          <option value="2">Table 2</option>
+          <option value="3">Table 3</option>
+          <option value="4">Table 4</option>
+          <option value="5">Table 5</option>
+          <option value="6">Table 6</option>
+        </select>
+        <button class="btn-primary full-width" id="place-order-btn">Place Order 🍽️</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 11. CONTACT & FOOTER ========== -->
+<section class="section contact-section" id="contact">
+  <div class="section-header">
+    <p class="section-eyebrow">Get in Touch</p>
+    <h2 class="section-title">Contact Us</h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="contact-icon">📍</div>
+      <h3>Visit Us</h3>
+      <p>123 Food Street<br>Mumbai 400001, India</p>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">📞</div>
+      <h3>Call Us</h3>
+      <p>+91 9806135784<br>+91 22 1234 5678</p>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <h3>Email</h3>
+      <p>hello@gazala.com<br>reserve@gazala.com</p>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">📱</div>
+      <h3>Follow Us</h3>
+      <p>@gazalarestaurant<br>Instagram · Facebook</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h2>GAZALA</h2>
+      <p>RESTAURANT & HOTEL</p>
+      <p class="footer-tag">Where flavors tell stories</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#hero">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#reserve">Reservation</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-links">
+      <h4>Hours</h4>
+      <p>Mon – Sun</p>
+      <p>11:00 AM – 11:00 PM</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Gazala Restaurant & Hotel · Made with ❤️</p>
+  </div>
+</footer>
+
+<button id="floating-cart" class="floating-cart hidden">
+  🛒 <span id="floating-count">0</span>
+</button>
+
+<div id="receipt-modal" class="modal hidden">
+  <div class="receipt">
+    <h2>GAZALA</h2>
+    <p class="sub">RESTAURANT & HOTEL</p>
+    <p class="addr">123 Food Street, Mumbai</p>
+    <hr />
+    <p>Order #<span id="r-order"></span></p>
+    <p><span id="r-type">Table 1</span></p>
+    <p id="r-date"></p>
+    <hr />
+    <div id="r-items"></div>
+    <hr />
+    <p class="r-row"><span>Subtotal</span><span>₹<span id="r-sub">0</span></span></p>
+    <p class="r-row"><span>GST</span><span>₹<span id="r-gst">0</span></span></p>
+    <p class="r-row r-total"><span>TOTAL</span><span>₹<span id="r-total">0</span></span></p>
+    <p class="thanks">Thank you! Your order is being prepared 🙏</p>
+    <button id="close-receipt" class="btn-primary full-width">Done</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
